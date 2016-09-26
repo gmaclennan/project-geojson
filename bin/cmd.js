@@ -4,10 +4,14 @@ var fs = require('fs')
 var path = require('path')
 var pump = require('pump')
 var argv = require('minimist')(process.argv.slice(2), {
-  t: 't_srs',
-  h: 'help',
-  s: 's_srs'
+  alias: {
+    t: 't_srs',
+    h: 'help',
+    s: 's_srs'
+  }
 })
+
+console.log('yo', argv)
 
 function usage (exit) {
   var out = exit === 1 ? process.stderr : process.stdout
@@ -15,7 +19,7 @@ function usage (exit) {
   process.exit(exit)
 }
 
-if (argv.h) {
+if (argv.help) {
   usage(0)
 }
 
@@ -35,14 +39,14 @@ if (argv.o) {
   ws = process.stdout
 }
 
-if (!argv.t) {
+if (!argv.t_srs) {
   console.error('must specify destination projection with --t_srs <srs_def>')
   usage(1)
 }
 
-argv.s = argv.s || 'EPSG:4326'
+argv.s_srs = argv.s_srs || 'EPSG:4326'
 
-pump(rs, ProjectStream(argv.s, argv.t), ws, function (err) {
+pump(rs, ProjectStream(argv.s_srs, argv.t_srs), ws, function (err) {
   if (!err) return
   console.error(err)
   process.exit(1)
