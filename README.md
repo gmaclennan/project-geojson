@@ -61,7 +61,7 @@ Returns a transform stream that expects GeoJSON as a string or buffer and will r
 
 ### `var objStream = projectStream.obj([fromProjection,] toProjection)`
 
-Returns and `objectMode` transform stream that expects and returns a stream of GeoJSON feature objects.
+Returns an `objectMode` transform stream that expects and returns a stream of GeoJSON feature objects.
 
 ### Example
 
