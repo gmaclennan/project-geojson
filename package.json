@@ -29,7 +29,9 @@
   "directories": {
     "example": "example"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^8.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gmaclennan/project-geojson.git"
