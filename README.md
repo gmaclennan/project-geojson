@@ -1,5 +1,7 @@
 # project-geojson
 
+[![npm](https://img.shields.io/npm/v/project-geojson.svg)](https://www.npmjs.com/package/project-geojson)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?maxAge=2592000)](http://standardjs.com/)
 
 > Project GeoJSON files or a stream of GeoJSON or GeoJSON objects with proj4
 
