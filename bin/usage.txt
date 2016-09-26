@@ -1,0 +1,16 @@
+usage:
+
+  project file.geojson --t_srs EPSG:3857
+
+    Project `file.geojson` to Pseudo Mercator (`EPSG:3857`), outputs to stdout
+
+  project --t_srs EPSG:3857
+  project - --t_srs EPSG:3857
+
+    Read input from stdin
+
+  options:
+
+    -t, --t_srs <srs_def>   Destination projection, either a EPSG string or a proj4 string
+    -s, --s_srs <srs_def>   Source projection, if omitted assumed to be `EPSG:4326`
+    -o                      Output file, if omitted outputs to stdout
