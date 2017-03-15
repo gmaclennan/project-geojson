@@ -11,8 +11,6 @@ var argv = require('minimist')(process.argv.slice(2), {
   }
 })
 
-console.log('yo', argv)
-
 function usage (exit) {
   var out = exit === 1 ? process.stderr : process.stdout
   fs.createReadStream(path.join(__dirname, 'usage.txt')).pipe(out)
